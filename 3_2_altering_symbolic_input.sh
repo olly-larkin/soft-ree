@@ -7,11 +7,20 @@ alias kd="/vol/linux/apps/singularity/bin/singularity run --no-mount tmp --writa
 alias qcg="/vol/srg/70024-SymEx/qcachegrind"
 export PATH="$HOST_PATH/klee/scripts:$PATH" 
 
+t1=$(date +%s)
 #row 1
 kd klee --libc=uclibc --posix-runtime /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --sym-arg 2 /etc/hostname --sym-stdin 1 --output-dir=/tmp/results/cat-arg 
+time=$(($(date +%s) - $t1))
+echo "Took $time secs"
 
+t2=$(date +%s)
 #row 2
 kd klee --libc=uclibc --posix-runtime /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --version --output-dir=/tmp/results/cat-version
+time=$(($(date +%s) - $t2))
+echo "Took $time secs"
 
+t3=$(date +%s)
 #row 3
 kd klee --libc=uclibc --posix-runtime /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --sym-arg 1 /etc/hostname --sym-stdin 2 --output-dir=/tmp/results/cat-stdin
+time=$(($(date +%s) - $t3))
+echo "Took $time secs"
