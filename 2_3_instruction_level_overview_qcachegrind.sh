@@ -7,4 +7,6 @@ alias kd="/vol/linux/apps/singularity/bin/singularity run --no-mount tmp --writa
 alias qcg="/vol/srg/70024-SymEx/qcachegrind"
 export PATH="$HOST_PATH/klee/scripts:$PATH" 
 
+echo $PATH
+
 qcg $HOST_PATH/results/get_sign/run.istats
