@@ -2,3 +2,4 @@
 /klee
 /singularity
 experiments/coreutils-8.31
+/klee_build

@@ -1,0 +1,19 @@
+/home/klee/klee_build/bin/klee --libc=uclibc --posix-runtime --search=bfs --max-memory=1024 --max-time=10min --output-dir=/tmp/results/expr-bfs /tmp/experiments/coreutils-8.31/obj-llvm/src/expr.bc --sym-args 0 1 10 --sym-args 0 3 2 --sym-stdout
+PID: 295617
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2021-02-17 16:49:07
+BEGIN searcher description
+BFSSearcher
+END searcher description
+Finished: 2021-02-17 16:59:28
+Elapsed: 00:10:21
+KLEE: done: explored paths = 1280
+KLEE: done: avg. constructs per query = 640
+KLEE: done: total queries = 2560
+KLEE: done: valid queries = 2388
+KLEE: done: invalid queries = 172
+KLEE: done: query cex = 2560
+
+KLEE: done: total instructions = 11727023
+KLEE: done: completed paths = 1280
+KLEE: done: generated tests = 1280

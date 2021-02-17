@@ -9,18 +9,23 @@ export PATH="$HOST_PATH/klee/scripts:$PATH"
 
 t1=$(date +%s)
 #row 1
-kd klee --libc=uclibc --posix-runtime /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --sym-arg 2 /etc/hostname --sym-stdin 1 --output-dir=/tmp/results/cat-arg 
-time=$(($(date +%s) - $t1))
-echo "Took $time secs"
+kd rm -rf /tmp/results/cat-arg
+kd klee --libc=uclibc --posix-runtime --output-dir=/tmp/results/cat-arg /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --sym-arg 2 /etc/hostname --sym-stdin 1
+time1=$(($(date +%s) - $t1))
+echo "Took $time1 secs"
 
 t2=$(date +%s)
 #row 2
-kd klee --libc=uclibc --posix-runtime /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --version --output-dir=/tmp/results/cat-version
-time=$(($(date +%s) - $t2))
-echo "Took $time secs"
+kd rm -rf /tmp/results/cat-version
+kd klee --libc=uclibc --posix-runtime --output-dir=/tmp/results/cat-version /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --version
+time2=$(($(date +%s) - $t2))
+echo "Took $time2 secs"
 
 t3=$(date +%s)
 #row 3
-kd klee --libc=uclibc --posix-runtime /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --sym-arg 1 /etc/hostname --sym-stdin 2 --output-dir=/tmp/results/cat-stdin
-time=$(($(date +%s) - $t3))
-echo "Took $time secs"
+kd rm -rf /tmp/results/cat-stdin
+kd klee --libc=uclibc --posix-runtime --output-dir=/tmp/results/cat-stdin /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --sym-arg 1 /etc/hostname --sym-stdin 2 
+time3=$(($(date +%s) - $t3))
+echo "Took $time3 secs"
+
+echo "Times taken: $time1, $time2, $time3"

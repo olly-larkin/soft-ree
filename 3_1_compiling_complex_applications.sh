@@ -15,4 +15,5 @@ kd /bin/bash -c 'cd /tmp/experiments/coreutils-8.31/obj-llvm && LLVM_COMPILER=cl
 kd /bin/bash -c 'cd /tmp/experiments/coreutils-8.31/obj-llvm && LLVM_COMPILER=clang make'
 kd /bin/bash -c "cd /tmp/experiments/coreutils-8.31/obj-llvm && export LLVM_COMPILER=clang && find . -executable -type f | xargs -I '{}' extract-bc '{}'"
 
+kd rm -rf /tmp/results/coreutils-simple-run
 kd klee --libc=uclibc --posix-runtime --output-dir=/tmp/results/coreutils-simple-run /tmp/experiments/coreutils-8.31/obj-llvm/src/cat.bc --version

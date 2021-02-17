@@ -1,0 +1,19 @@
+/home/klee/klee_build/bin/klee --libc=uclibc --posix-runtime --search=dfs --max-memory=1024 --max-time=10min --output-dir=/tmp/results/expr-dfs /tmp/experiments/coreutils-8.31/obj-llvm/src/expr.bc --sym-args 0 1 10 --sym-args 0 3 2 --sym-stdout
+PID: 279911
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2021-02-17 16:37:36
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2021-02-17 16:49:03
+Elapsed: 00:11:27
+KLEE: done: explored paths = 60
+KLEE: done: avg. constructs per query = 22557
+KLEE: done: total queries = 973
+KLEE: done: valid queries = 845
+KLEE: done: invalid queries = 128
+KLEE: done: query cex = 973
+
+KLEE: done: total instructions = 996225
+KLEE: done: completed paths = 60
+KLEE: done: generated tests = 60

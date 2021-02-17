@@ -1,0 +1,254 @@
+array arg00[3] : w32 -> w8 = symbolic
+array arg01[3] : w32 -> w8 = symbolic
+array const_arr16[32] : w32 -> w8 = [64 196 165 243 105 85 0 0 208 209 212 245 105 85 0 0 112 219 212 245 105 85 0 0 0 0 0 0 0 0 0 0]
+array model_version[4] : w32 -> w8 = symbolic
+array n_args[4] : w32 -> w8 = symbolic
+array n_args_1[4] : w32 -> w8 = symbolic
+array stdout-stat[144] : w32 -> w8 = symbolic
+(query [(Ult N0:(ReadLSB w32 0 n_args)
+              2)
+         (Eq false (Slt 0 N0))
+         (Ult N1:(ReadLSB w32 0 n_args_1)
+              4)
+         (Slt 0 N1)
+         (Eq false
+             (Sle 32
+                  (SExt w32 N2:(Read w8 0 arg00))))
+         (Sle 32
+              (SExt w32 (Read w8 1 arg00)))
+         (Slt 1 N1)
+         (Eq false
+             (Sle 32
+                  (SExt w32 (Read w8 0 arg01))))
+         (Sle 32
+              (SExt w32 (Read w8 1 arg01)))
+         (Eq false (Slt 2 N1))
+         (Eq false
+             (Eq 0
+                 (And w64 (ReadLSB w64 8 stdout-stat)
+                          2147483647)))
+         (Eq 0
+             (And w64 (ReadLSB w64 56 stdout-stat)
+                      18446744073709486080))
+         (Eq 1
+             (ReadLSB w32 0 model_version))
+         (Eq false
+             (Eq 0
+                 (Read w8 (Extract w32 0 (Add w64 18446650160125259312
+                                                  (ReadLSB w64 N3:(Extract w32 0 (Add w64 8
+                                                                                          N4:(Add w64 N5:(Add w64 N6:(Add w64 N7:(Add w64 N8:(Add w64 N9:(Add w64 N10:(Mul w64 8
+                                                                                                                                                                               (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 43 N2))))))
+                                                                                                                                                                  (Mul w64 8
+                                                                                                                                                                           (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 108
+                                                                                                                                                                                                                       (Read w8 (Extract w32 0 (Add w64 18446650160125259312
+                                                                                                                                                                                                                                                        (ReadLSB w64 N11:(Extract w32 0 (Add w64 8 N10)) const_arr16)))
+                                                                                                                                                                                                                                U0:[2=0] @ arg00))))))))
+                                                                                                                                                      (Mul w64 8
+                                                                                                                                                               (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 109
+                                                                                                                                                                                                           (Read w8 (Extract w32 0 (Add w64 18446650160125259312
+                                                                                                                                                                                                                                            (ReadLSB w64 N12:(Extract w32 0 (Add w64 8 N9)) const_arr16)))
+                                                                                                                                                                                                                    U0))))))))
+                                                                                                                                          (Mul w64 8
+                                                                                                                                                   (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 105
+                                                                                                                                                                                               (Read w8 (Extract w32 0 (Add w64 18446650160125259312
+                                                                                                                                                                                                                                (ReadLSB w64 N13:(Extract w32 0 (Add w64 8 N8)) const_arr16)))
+                                                                                                                                                                                                        U0))))))))
+                                                                                                                              (Mul w64 8
+                                                                                                                                       (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 115
+                                                                                                                                                                                   (Read w8 (Extract w32 0 (Add w64 18446650160125259312
+                                                                                                                                                                                                                    (ReadLSB w64 N14:(Extract w32 0 (Add w64 8 N7)) const_arr16)))
+                                                                                                                                                                                            U0))))))))
+                                                                                                                  (Mul w64 8
+                                                                                                                           (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 40
+                                                                                                                                                                       (Read w8 (Extract w32 0 (Add w64 18446650160125259312
+                                                                                                                                                                                                        (ReadLSB w64 N15:(Extract w32 0 (Add w64 8 N6)) const_arr16)))
+                                                                                                                                                                                U0))))))))
+                                                                                                      (Mul w64 8
+                                                                                                               (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 41
+                                                                                                                                                           (Read w8 (Extract w32 0 (Add w64 18446650160125259312
+                                                                                                                                                                                            (ReadLSB w64 N16:(Extract w32 0 (Add w64 8 N5)) const_arr16)))
+                                                                                                                                                                    U0)))))))))) const_arr16)))
+                          U0)))
+         (Eq false
+             (Eq 0
+                 N17:(Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                      (ReadLSB w64 N18:(Extract w32 0 (Add w64 16
+                                                                                               (Add w64 N19:(Add w64 N20:(Add w64 N21:(Add w64 N22:(Add w64 N23:(Add w64 N24:(Add w64 N25:(Add w64 N26:(Add w64 N27:(Add w64 N28:(Add w64 N29:(Add w64 N30:(Add w64 N31:(Add w64 N32:(Add w64 N4
+                                                                                                                                                                                                                                                                                              (Mul w64 8
+                                                                                                                                                                                                                                                                                                       (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 58
+                                                                                                                                                                                                                                                                                                                                                   (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                                                                                                                    (ReadLSB w64 N33:(Extract w32 0 (Add w64 16 N4)) const_arr16)))
+                                                                                                                                                                                                                                                                                                                                                            U1:[2=0] @ arg01))))))))
+                                                                                                                                                                                                                                                                                 (Mul w64 8
+                                                                                                                                                                                                                                                                                          (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 42
+                                                                                                                                                                                                                                                                                                                                      (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                                                                                                       (ReadLSB w64 N34:(Extract w32 0 (Add w64 16 N32)) const_arr16)))
+                                                                                                                                                                                                                                                                                                                                               U1))))))))
+                                                                                                                                                                                                                                                                    (Mul w64 8
+                                                                                                                                                                                                                                                                             (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 47
+                                                                                                                                                                                                                                                                                                                         (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                                                                                          (ReadLSB w64 N35:(Extract w32 0 (Add w64 16 N31)) const_arr16)))
+                                                                                                                                                                                                                                                                                                                                  U1))))))))
+                                                                                                                                                                                                                                                       (Mul w64 8
+                                                                                                                                                                                                                                                                (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 37
+                                                                                                                                                                                                                                                                                                            (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                                                                             (ReadLSB w64 N36:(Extract w32 0 (Add w64 16 N30)) const_arr16)))
+                                                                                                                                                                                                                                                                                                                     U1))))))))
+                                                                                                                                                                                                                                          (Mul w64 8
+                                                                                                                                                                                                                                                   (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 43
+                                                                                                                                                                                                                                                                                               (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                                                                (ReadLSB w64 N37:(Extract w32 0 (Add w64 16 N29)) const_arr16)))
+                                                                                                                                                                                                                                                                                                        U1))))))))
+                                                                                                                                                                                                                             (Mul w64 8
+                                                                                                                                                                                                                                      (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 45
+                                                                                                                                                                                                                                                                                  (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                                                   (ReadLSB w64 N38:(Extract w32 0 (Add w64 16 N28)) const_arr16)))
+                                                                                                                                                                                                                                                                                           U1))))))))
+                                                                                                                                                                                                                (Mul w64 8
+                                                                                                                                                                                                                         (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 60
+                                                                                                                                                                                                                                                                     (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                                      (ReadLSB w64 N39:(Extract w32 0 (Add w64 16 N27)) const_arr16)))
+                                                                                                                                                                                                                                                                              U1))))))))
+                                                                                                                                                                                                   (Mul w64 8
+                                                                                                                                                                                                            (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 60
+                                                                                                                                                                                                                                                        (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                                         (ReadLSB w64 N40:(Extract w32 0 (Add w64 16 N26)) const_arr16)))
+                                                                                                                                                                                                                                                                 U1))))))))
+                                                                                                                                                                                      (Mul w64 8
+                                                                                                                                                                                               (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 61
+                                                                                                                                                                                                                                           (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                                            (ReadLSB w64 N41:(Extract w32 0 (Add w64 16 N25)) const_arr16)))
+                                                                                                                                                                                                                                                    U1))))))))
+                                                                                                                                                                         (Mul w64 8
+                                                                                                                                                                                  (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 61
+                                                                                                                                                                                                                              (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                               (ReadLSB w64 N42:(Extract w32 0 (Add w64 16 N24)) const_arr16)))
+                                                                                                                                                                                                                                       U1))))))))
+                                                                                                                                                            (Mul w64 8
+                                                                                                                                                                     (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 33
+                                                                                                                                                                                                                 (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                                  (ReadLSB w64 N43:(Extract w32 0 (Add w64 16 N23)) const_arr16)))
+                                                                                                                                                                                                                          U1))))))))
+                                                                                                                                               (Mul w64 8
+                                                                                                                                                        (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 62
+                                                                                                                                                                                                    (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                                     (ReadLSB w64 N44:(Extract w32 0 (Add w64 16 N22)) const_arr16)))
+                                                                                                                                                                                                             U1))))))))
+                                                                                                                                  (Mul w64 8
+                                                                                                                                           (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 62
+                                                                                                                                                                                       (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                                        (ReadLSB w64 N45:(Extract w32 0 (Add w64 16 N21)) const_arr16)))
+                                                                                                                                                                                                U1))))))))
+                                                                                                                     (Mul w64 8
+                                                                                                                              (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 38
+                                                                                                                                                                          (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                                           (ReadLSB w64 N46:(Extract w32 0 (Add w64 16 N20)) const_arr16)))
+                                                                                                                                                                                   U1))))))))
+                                                                                                        (Mul w64 8
+                                                                                                                 (SExt w64 (ZExt w32 (Extract 0 (ZExt w8 (Eq 124
+                                                                                                                                                             (Read w8 (Extract w32 0 (Add w64 18446650160125256848
+                                                                                                                                                                                              (ReadLSB w64 N47:(Extract w32 0 (Add w64 16 N19)) const_arr16)))
+                                                                                                                                                                      U1)))))))))) const_arr16)))
+                              U1)))
+         (Eq false (Eq 96 N17))
+         (Eq false (Eq 97 N17))
+         (Eq false (Eq 98 N17))
+         (Eq false (Eq 99 N17))
+         (Eq false (Eq 100 N17))
+         (Eq false (Eq 101 N17))
+         (Eq false (Eq 102 N17))
+         (Eq false (Eq 103 N17))
+         (Eq false (Eq 104 N17))
+         (Eq false (Eq 105 N17))
+         (Eq false (Eq 106 N17))
+         (Eq false (Eq 107 N17))
+         (Eq false (Eq 108 N17))
+         (Eq false (Eq 109 N17))
+         (Eq false (Eq 110 N17))
+         (Eq false (Eq 111 N17))
+         (Eq false (Eq 112 N17))
+         (Eq false (Eq 113 N17))
+         (Eq false (Eq 114 N17))
+         (Eq false (Eq 115 N17))
+         (Eq false (Eq 116 N17))
+         (Eq false (Eq 117 N17))
+         (Eq false (Eq 118 N17))
+         (Eq false (Eq 119 N17))
+         (Eq false (Eq 120 N17))
+         (Eq false (Eq 121 N17))
+         (Eq false (Eq 122 N17))
+         (Eq false (Eq 123 N17))
+         (Eq false (Eq 124 N17))
+         (Eq false (Eq 125 N17))
+         (Eq false (Eq 126 N17))
+         (Eq false (Eq 65 N17))
+         (Eq false (Eq 66 N17))
+         (Eq false (Eq 67 N17))
+         (Eq false (Eq 68 N17))
+         (Eq false (Eq 69 N17))
+         (Eq false (Eq 70 N17))
+         (Eq false (Eq 71 N17))
+         (Eq false (Eq 72 N17))
+         (Eq false (Eq 73 N17))
+         (Eq false (Eq 74 N17))
+         (Eq false (Eq 75 N17))
+         (Eq false (Eq 76 N17))
+         (Eq false (Eq 77 N17))
+         (Eq false (Eq 78 N17))
+         (Eq false (Eq 79 N17))
+         (Eq false (Eq 80 N17))
+         (Eq false (Eq 81 N17))
+         (Eq false (Eq 82 N17))
+         (Eq false (Eq 83 N17))
+         (Eq false (Eq 84 N17))
+         (Eq false (Eq 85 N17))
+         (Eq false (Eq 86 N17))
+         (Eq false (Eq 87 N17))
+         (Eq false (Eq 88 N17))
+         (Eq false (Eq 89 N17))
+         (Eq false (Eq 90 N17))
+         (Eq false (Eq 91 N17))
+         (Eq false (Eq 92 N17))
+         (Eq false (Eq 93 N17))
+         (Eq false (Eq 94 N17))
+         (Eq false (Eq 95 N17))
+         (Eq false (Eq 32 N17))
+         (Eq false (Eq 33 N17))
+         (Eq false (Eq 34 N17))
+         (Eq false (Eq 35 N17))
+         (Eq false (Eq 36 N17))
+         (Eq false (Eq 37 N17))
+         (Eq false (Eq 38 N17))
+         (Eq false (Eq 39 N17))
+         (Eq false (Eq 40 N17))
+         (Eq false (Eq 41 N17))
+         (Eq false (Eq 42 N17))
+         (Eq false (Eq 43 N17))
+         (Eq false (Eq 44 N17))
+         (Eq false (Eq 45 N17))
+         (Eq false (Eq 46 N17))
+         (Eq false (Eq 47 N17))
+         (Eq false (Eq 48 N17))
+         (Eq false (Eq 49 N17))
+         (Eq false (Eq 50 N17))
+         (Eq false (Eq 51 N17))
+         (Eq false (Eq 52 N17))
+         (Eq false (Eq 53 N17))
+         (Eq false (Eq 54 N17))
+         (Eq false (Eq 55 N17))
+         (Eq false (Eq 56 N17))
+         (Eq false (Eq 57 N17))
+         (Eq false (Eq 58 N17))
+         (Eq false (Eq 59 N17))
+         (Eq false (Eq 60 N17))
+         (Eq false (Eq 61 N17))
+         (Eq false (Eq 62 N17))
+         (Eq false (Eq 63 N17))
+         (Eq false (Eq 7 N17))
+         (Eq false (Eq 8 N17))
+         (Eq false (Eq 9 N17))
+         (Eq false (Eq 10 N17))
+         (Eq false (Eq 11 N17))
+         (Eq false (Eq 12 N17))
+         (Eq false (Eq 13 N17))]
+        false)

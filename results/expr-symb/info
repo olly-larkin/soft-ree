@@ -1,0 +1,19 @@
+klee --libc=uclibc --posix-runtime --max-time=10min --max-memory=1024 --output-dir=/tmp/results/expr-symb --search=symb-load /tmp/experiments/coreutils-8.31/obj-llvm/src/expr.bc --sym-args 0 1 10 --sym-args 0 3 2 --sym-stdout
+PID: 469300
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2021-02-17 18:51:03
+BEGIN searcher description
+SYMBLoadSearcher
+END searcher description
+Finished: 2021-02-17 19:01:08
+Elapsed: 00:10:05
+KLEE: done: explored paths = 4773
+KLEE: done: avg. constructs per query = 17
+KLEE: done: total queries = 97
+KLEE: done: valid queries = 40
+KLEE: done: invalid queries = 57
+KLEE: done: query cex = 97
+
+KLEE: done: total instructions = 142052591
+KLEE: done: completed paths = 4773
+KLEE: done: generated tests = 4773
